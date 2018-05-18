@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Solent Pizza Co.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- links to stylesheet -->
+        <link rel="icon" href="http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Pizza-icon.png">
+     
+<!-- Current time and date script -->
+<span id="datetime">
+
+<script> 
+    
+  var dt = new Date();
+ document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+    
+</script>
+</span>    <!-- Close Time and Date Script -->
+
+<!-- Java image rollover script-->
+<script language="javascript"> 
+        function MouseRollover(MyImage) 
+    {
+        MyImage.src = "pizza2.jpg";
+    }
+        function MouseOut(MyImage) 
+    {
+        MyImage.src = "pizza1.jpg";
+    }
+</script> <!-- close script -->
+ </head>
+   
+ <body> 
+        
+    <div class="row">
+        <div class="col twelve">
+          <h1>Solent Pizza Co.</h1>
+               <div class="menu"> <!-- Navigation Menu --> 
+                    <a class="active" href="index.html"><span>Home</span></a>
+                    <a href="order.html">Order</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+        </div>
+     </div>
+    
+         <div class="row">
+        
+       
+        <div class="col twelve">
+        <p> Solent Pizza is based in Southampton and has been providing excellent pizzas since 1997.<br> 
+            If you do have any queries please click onto our contact page. </p>
+       
+         </div>  
+        </div>        
+           
+           <div class="row">
+            <div class="col twelve">
+     <!--The rollover image displays here.-->
+    <img src="pizza1.jpg" class="image"
+    onMouseOver="MouseRollover(this)" 
+    onMouseOut="MouseOut(this)"
+            </div>
+            </div> 
+              
+           <!-- footer area --> 
+     <div class="row">
+        <div class="col twelve">
+            <p>Solent Pizza Company&copy; - 2018<br>Created by Taylor Deacon</p>
+        </div>
+    </div>
+  
+        
+    </body>
+ 
+    
+</html>

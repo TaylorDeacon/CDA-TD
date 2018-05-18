@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solent Pizza Co.</title> <!-- page title -->
+        <link rel="stylesheet" type="text/css" href="main.css"> <!-- links to stylesheet -->
+        <link rel="icon" href="http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Pizza-icon.png"> 
+        
+        <!-- Current time and date script -->
+<span id="datetime">
+
+<script> 
+    
+  var dt = new Date();
+ document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+    
+</script>
+</span>    <!-- close time and date script -->
+           
+             <!-- Javascript validation -->
+    <script> 
+        
+        function validateForm() {
+            var x = document.forms["Form"]["fname"].value;
+            if (x == "") {
+                alert("First name must be filled out");
+                return false;
+            }
+        }   
+                  
+        function validateForm() {
+            var x = document.forms["Form"]["lname"].value;
+            if (x == "") {
+                alert("Last name must be filled out");
+                return false;
+            }
+        } 
+                  
+        function validateForm() {
+            var x = document.forms["Form"]["email"].value;
+            if (x == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+        } 
+                  
+        function validateForm() {
+            var x = document.forms["Form"]["Message"].value;
+            if (x == "") {
+                alert("Message must be filled out");
+                return false;
+            }
+        } 
+                  
+    </script> <!-- end of javascript -->
+ </head>
+ 
+ <body> 
+ 
+    <div class="row">
+        <div class="col twelve">
+          <h1>Solent Pizza Co.</h1>
+               <div class="menu">
+                    <a class="active" href="index.html"><span>Home</span></a>
+                    <a href="order.html">Order</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+        </div>
+  </div>
+  
+  
+  <div class="row">
+   <div class="col six">
+    <p> This is where we are based in Southampton. </p>
+    <div id="googlemap"> <!-- google maps embed --> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.5229582285815!2d-1.4103653343330451!3d50.91404241173302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487476af3fcb3f0d%3A0xe8ab5c63a46236c2!2sWilton+Ave%2C+Southampton+SO15+2HA!5e0!3m2!1sen!2suk!4v1525787606358" width="600" height="487" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div> <!-- end of embedded map -->
+                    
+                
+  
+                    
+                    <div class="col six">
+                    <p> If you have any queries, please enter them in the form below.</p> 
+<div class="container"> <!-- container --> 
+    <div class="form2">   <!-- start of second form class --> 
+        
+        <form name="Form" action="/form.php" onsubmit="return validateForm()" method="post">
+            <label for="fname">First Name<br></label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..."  >
+
+            <label for="lname"><br>Last Name<br></label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+            <label for="Email"><br>Email<br></label>
+            <input type="text" placeholder="Enter Email" name="Email Address" >
+      
+            <label for="Number"><br>Number<br></label>
+            <input type="number" placeholder="Enter Number" name="Number" >  
+
+            <label for="subject"><br>Message<br></label>
+            <textarea id="subject" name="Message" placeholder="Write something.." ></textarea>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </form> <!-- end of form itself --> 
+    </div> <!-- end of form class --> 
+                        </div><!--end of container-->
+   </div>
+  </div>
+           
+<!-- footer area -->
+      <div class="row">
+        <div class="col twelve">
+            <p>Solent Pizza Company&copy;  - 2018<br>Created by Taylor Deacon</p>
+        </div>
+    </div>
+            
+    </body>
+</html>

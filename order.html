@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Solent Pizza Co.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- links to stylesheet -->
+        <link rel="icon" href="http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Pizza-icon.png">
+     
+<!-- Current time and date script -->
+<span id="datetime">
+
+<script> 
+    
+  var dt = new Date();
+ document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+    
+</script>
+</span>    <!-- close time and date script -->
+</head>
+ 
+<body>    
+     <div class="row">
+        <div class="col twelve">
+          <h1>Solent Pizza Co.</h1>
+               <div class="menu"> <!-- Navigation Menu -->
+                    <a class="active" href="index.html"><span>Home</span></a>
+                    <a href="order.html">Order</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+        </div>
+     </div>
+      
+        <div class="row">
+        <div class="col twelve">
+		<article>
+		<div style="text-align: center;">
+		<h2></h2>
+            <form  onchange="main()" id="pizzaBase">
+		<fieldset>
+            <legend>Select your pizza base*</legend> <!-- Start of Order Form -->
+		     
+                 <p><input id="pizza" type="radio"  name="pizzabase" data-price ="5.00" value="5" onclick="calculate()">Small <span class="price">£5.00</span></p>
+                 <p><input id="pizza" type="radio"  name="pizzabase" data-price ="7.00" value="7" onclick="calculate()">Medium <span class="price">£7.00</span></p>
+				<p><input id="pizza" type="radio"  name="pizzabase" data-price ="10.00" value="10" onclick="calculate()">Large <span class="price">£10.00</span></p>
+				<p><input id="pizza" type="radio" name="pizzabase" data-price ="12.00" value="12" onclick="calculate()">Extra Large <span class="price">£12.00</span></p>
+			</label>
+            </fieldset>	
+            
+		<fieldset>
+				<legend>Select one or more toppings*:</legend>
+				<label for="topping"><p><input type="checkbox" name="topping"  value="cheese">Cheese <span class="price">£1</span></p>
+				<p><input type="checkbox" name="topping"  value="pepperoni">Pepperoni <span class="price">£0.20</span></p>
+				<p><input type="checkbox" name="topping"  value="ham">Ham <span class="price">£0.20</span></p>
+				<p><input type="checkbox" name="topping"  value="pineapple">Pineapple <span class="price">£0.20</span></p>
+				</label>
+		</fieldset>	
+		<fieldset>
+				<legend>Extras</legend>
+				<p><input type="checkbox"   value="cheese">Chips <span class="price">£1.50</span></p>					
+		</fieldset>
+		<fieldset>
+            <legend>Delivery information</legend>
+			<p> Address: 
+			<input type ="text" > </p>
+			<p> Post Code :
+			<input type ="text" > </p>
+		</fieldset>
+			<input type="submit" value="Submit">      <input type="Reset" value="Reset">
+		</form>
+		</div>
+            </div>
+        </article>
+        </div>
+        </div> <!-- end of order form -->
+   
+
+ <div class="row">
+        <div class="col twelve">
+            <p>Solent Pizza Company&copy;  - 2018<br>Created by Taylor Deacon</p>
+        </div>
+    </div>
+
+    </body>
+</html>
